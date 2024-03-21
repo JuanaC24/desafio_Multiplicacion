@@ -9,15 +9,17 @@ function solicitarNumero() {
 }
 
 function factorial(numero) {
-    let resultado = 1;
-    let pasos = ""; 
+    let resultado = "";
 
     for (let i = 1; i <= numero; i++) {
-        resultado *= i;
-        pasos += `Factorial de ${i} es: ${resultado}<br>`; 
+        let factorialResultado = 1;
+       for(let j = 1;j<= i; j++){
+        factorialResultado *=j;
+       }
+        resultado += `Factorial de ${i} es: ${factorialResultado}<br>`; 
     }
 
-    return pasos; 
+    return resultado; 
 }
 
 
